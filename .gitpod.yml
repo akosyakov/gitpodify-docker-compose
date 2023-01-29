@@ -1,7 +1,4 @@
+image: 
+  file: .gitpod.Dockerfile
 tasks:
-   - init: docker-compose pull --quiet --parallel
-     command: |
-      OUTPUT="out/$(date +%F_T"%H-%M-%S").txt"
-      mkdir out
-      ./start.sh > $OUTPUT &
-      exit
+   - command: service docker-compose start
